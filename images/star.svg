@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet">
+<!--<path stroke="black" stroke-width="3" transform-origin="center" id="spinner" fill="#F8D64E" d="m48,234 73-226 73,226-192-140h238z">-->
+<polygon transform-origin="center" fill="#F8D64E" stroke="#000000" stroke-width="3" points="50,235 80,150 5,95 100,95 125,5 155,95 245,95 170,150 200,235 125,185 ">
+
+ <animateTransform attributeName="transform" type="scale" values=".1;.6;.4;.8;.6;1;1.5;2;5" dur="3s" fill="freeze" repeatcount="1"/>
+     <animateTransform attributeName="transform" type="rotate" values="-20;-10;0;10;20;30" dur="3s" fill="freeze" repeatcount="1" additive="sum"/>
+    <animate attributeName="opacity" values="1;1;1;0" fill="freeze" dur="3s"/>
+
+
+</polygon>
+</svg>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+  <meta charset=utf-8>
+  <!--[if IE]>    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+  <link rel="shortcut icon" href=images/123.ico>
+
+  <title>Кроссворд</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel=stylesheet href=css/style_ec.css>
+  <link rel=stylesheet href=css/eclip.css>
+  <link id="Vkeyboard" rel="stylesheet" href="css/Vkeyboard_black.css" />
+
+  <script src='js/adapt.js'></script>
+
+</head>
+
+<body>
+  <div class="_puzzle wrapper">
+
+    <main class=page>
+      <section class=puzzle>
+        <div class=puzzle__container>
+
+
+            <div class="_header puzzle__header">
+              <div class="_header-line puzzle__line"></div>
+              <div class="_header-block puzzle__header-block">
+                <div class="_header-title-line puzzle__title-line">
+                  <picture>
+                    <source srcset=images/line-left.webp type=image/webp><img class="_header-img puzzle__title-img" src=images/line-left.png alt="" loading=lazy>
+                  </picture>
+                </div>
+                <h2 class="_title puzzle__title">Кроссворд</h2>
+                <div class="_header-title-line puzzle__title-line">
+                  <picture>
+                    <source srcset=images/line-right.webp type=image/webp><img class="_header-img puzzle__title-img" src=images/line-right.png alt="" loading=lazy>
+                  </picture>
+                </div>
+
+              </div>
+              <div class="_header-line puzzle__line"></div>
+
+            </div>
+
+            <div class=puzzle__body>
+              <!-- cross -->
+
+              <div id="waitmessage" class="ecw-answerbox">
+
+              </div>
+
+              <table cellpadding="0" cellspacing="0" border="0">
+
+                <tr>
+                  <td class="ecw-crosswordarea">
+                    <h3></h3>
+
+                    <script src='js/sam_4.js'></script>
+                    <script src='js/eclip.js'></script>
+
+                  </td>
+
+                  <td valign="top" style="padding-left: 3em;">
+
+                    <div id="welcomemessage" class="ecw-answerbox" style="display:none;">
+                      <h3>Здравствуйте!</h3>
+                      <p>Нажмите на любую клетку поля чтобы начать.</p>
+                    </div>
+
+                    <div id="answerbox" class="ecw-answerbox" style="display:none;">
+                      <h3 id="wordlabel" class="ecw-wordlabel"> &nbsp;</h3>
+                      <div id="wordinfo" class="ecw-wordinfo"> </div>
+                      <div id="wordclue" class="ecw-cluebox"> </div>
+                      <div style="margin-top: 1em; text-align:center;">
+                        <input class="ecw-input mm" id="wordentry" type="text" data-keyboard='virtual' size="24" style="font-weight: bold; text-transform:uppercase;" onkeypress="WordEntryKeyPress(event)" onchange="WordEntryKeyPress(event)" />
+                      </div>
+                      <div id="worderror" class="ecw-worderror"></div>
+
+                      <table border="0" cellspacing="0" cellpadding="0" width="100%" style="margin-top:1em;">
+                        <tbody>
+                          <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                              <button id="okbutton" type="button" class="ecw-input ecw-button" onclick="OKClick();" style="font-weight: bold;">OK</button>
+                            </td>
+                            <td>
+	<button id="checkbutton" type="button" onclick="CheckClick();" style="display: none;">проверка</button>
+                            </td>							
+                          </tr>
+						  						  <tr>
+						  <td>
+						  <div class="mm" id="Vkeyboard_wrapper" style="height:100%;width:100%; position: relative; top: 2em; bottom: 0; left: 0; right: 0;">
+						  </td>
+						  </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+
+                    <div id="congratulations" class="ecw-answerbox" style="display:none;">
+                      <h3>Поздравляем!</h3>
+                      <p>Вы полностью разгадали этот кроссворд.
+                      </p>
+                      <p>Можете попробовать решить другую головоломку.
+
+                      </p>
+                    </div>
+
+                  </td>
+                </tr>
+
+              </table>
+
+              <div>
+                <br>
+
+              </div>
+
+              <script type="text/javascript">
+                <!--
+                BeginCrossword();
+                //-->
+              </script>
+			  <br><br><br>
+			  <a class="_btn fifteen__btn" style=color:white; href=../games.html>назад</a><br><br><br> 
+              </div>
+
+              <!-- cross -->
+
+            </div>
+<br><br><br>
+             
+
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.Vkeyboard.js"></script>
+  <script>
+    $('body').Vkeyboard();
+    $('.btn').click(function() {
+      $('#Vkeyboard').attr('href', 'Vkeyboard_' + $(this).attr('id') + '.css')
+    });
+  </script>
+</body>
+
+</html>
